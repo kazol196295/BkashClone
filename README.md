@@ -40,7 +40,7 @@ A high-fidelity clone of the bKash Android app, built entirely using **Jetpack C
 
 1. **Clone the repository:**
 ```bash
-   git clone https://github.com/yourusername/bkash-clone-compose.git
+   git clone https://github.com/kazol196295/BkashClone.git
 ```
 
 2. **Open in Android Studio:** Ensure you have the latest version of Android Studio (Ladybug or newer).

@@ -177,31 +177,37 @@ fun LoginPinScreen(
 }
 
 
-//// --- LOGIN PIN SCREEN PREVIEWS ---
-//
-//@Preview(device = "id:pixel_5", showSystemUi = true, name = "Login PIN - English")
-//@Composable
-//fun PreviewLoginPinEng() {
-//    LoginPinScreen(
-//        phoneNumber = "01712345678",
-//        isEnglish = true,
-//        onLanguageChange = {},
-//        onBackClick = {},
-//        onNextClick = {}
-//    )
-//}
-//
-//@Preview(device = "id:pixel_5", showSystemUi = true, name = "Login PIN - Bangla")
-//@Composable
-//fun PreviewLoginPinBng() {
-//    LoginPinScreen(
-//        phoneNumber = "01911223344",
-//        isEnglish = false,
-//        onLanguageChange = {},
-//        onBackClick = {},
-//        onNextClick = {}
-//    )
-//}
+// --- UPDATED LOGIN PIN SCREEN PREVIEWS ---
+
+@Preview(device = "id:pixel_5", showSystemUi = true, name = "7a. Login PIN - English")
+@Composable
+fun PreviewLoginPinEng() {
+    MaterialTheme {
+        LoginPinScreen(
+            phoneNumber = "01712345678",
+            correctPin = "12345", // Added required parameter
+            isEnglish = true,
+            onLanguageChange = {},
+            onBackClick = {},
+            onNextClick = {}
+        )
+    }
+}
+
+@Preview(device = "id:pixel_5", showSystemUi = true, name = "7b. Login PIN - Bangla")
+@Composable
+fun PreviewLoginPinBng() {
+    MaterialTheme {
+        LoginPinScreen(
+            phoneNumber = "01911223344",
+            correctPin = "12345", // Added required parameter
+            isEnglish = false,
+            onLanguageChange = {},
+            onBackClick = {},
+            onNextClick = {}
+        )
+    }
+}
 
 /**
  * Pro Tip: To see the "Incorrect PIN" error message in the preview,

@@ -324,3 +324,86 @@ fun PreviewNumPadDisabled() {
         onNextClick = {}
     )
 }
+
+
+
+// --- UNIQUE COMPONENT PREVIEWS ---
+
+@Preview(showBackground = true, name = "Comp - Light Toggle English")
+@Composable
+fun PreviewLightToggleEngComponent() {
+    MaterialTheme {
+        Box(Modifier.padding(20.dp).background(Color.White)) {
+            LightLanguageToggle(isEnglish = true, onLanguageChange = {})
+        }
+    }
+}
+
+@Preview(showBackground = true, name = "Comp - Top Bar Toggle")
+@Composable
+fun PreviewTopBarToggleComponent() {
+    MaterialTheme {
+        BkashTopBar(
+            onBackClick = {},
+            showLanguageToggle = true,
+            isEnglish = true,
+            onLanguageChange = {}
+        )
+    }
+}
+
+@Preview(showBackground = true, name = "Comp - Top Bar Skip")
+@Composable
+fun PreviewTopBarSkipComponent() {
+    MaterialTheme {
+        BkashTopBar(
+            onBackClick = {},
+            rightText = "Skip",
+            onRightTextClick = {}
+        )
+    }
+}
+
+@Preview(showBackground = true, name = "Comp - Bottom Pink Button")
+@Composable
+fun PreviewBottomBtnComponent() {
+    MaterialTheme {
+        BkashBottomButton(
+            text = "পরবর্তী",
+            onClick = {}
+        )
+    }
+}
+
+@Preview(showBackground = true, name = "Comp - Number Pad Enabled")
+@Composable
+fun PreviewNumPadEnabledComponent() {
+    MaterialTheme {
+        Column {
+            BkashNumberPad(
+                isEnglish = true,
+                isNextEnabled = true,
+                onNumberClick = {},
+                onBackspaceClick = {},
+                onNextClick = {}
+            )
+        }
+    }
+}
+
+@Preview(showBackground = true, name = "Comp - Number Pad Disabled")
+@Composable
+fun PreviewNumPadDisabledComponent() {
+    MaterialTheme {
+        Column {
+            BkashNumberPad(
+                isEnglish = false,
+                isNextEnabled = false,
+                buttonText = "নিশ্চিত করুন",
+                onNumberClick = {},
+                onBackspaceClick = {},
+                onNextClick = {}
+            )
+        }
+    }
+}

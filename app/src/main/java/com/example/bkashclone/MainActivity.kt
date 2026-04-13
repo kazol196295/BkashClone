@@ -276,10 +276,10 @@ fun SplashScreen(onTimeout: () -> Unit) {
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(id = R.drawable.ic_bkash_logo),
+            painter = painterResource(id = R.drawable.ic_bkash_red_logo),
             contentDescription = "bKash Logo",
             modifier = Modifier
-                .size(240.dp)
+                .size(200.dp)
                 .offset(y = (-40).dp)
                 .graphicsLayer(
                     scaleX = scale,
@@ -324,7 +324,7 @@ fun LoadingOverlay(isLoading: Boolean) {
                     .decoderFactory(GifDecoder.Factory())
                     .build(),
                 contentDescription = "Loading...",
-                modifier = Modifier.size(120.dp) // Adjust size as needed
+                modifier = Modifier.size(240.dp) // Adjust size as needed
             )
         }
     }
@@ -447,62 +447,107 @@ class PrefManager(context: android.content.Context) {
 
 
 
-// --- FULL SCREEN PREVIEWS ---
+// --- UPDATED FULL SCREEN PREVIEWS ---
 
 @Preview(device = "id:pixel_5", showSystemUi = true, name = "1. Splash Screen")
 @Composable
 fun PreviewSplashScreen() {
-    SplashScreen(onTimeout = {})
+    MaterialTheme {
+        SplashScreen(onTimeout = {})
+    }
 }
 
 @Preview(device = "id:pixel_5", showSystemUi = true, name = "2. Choice Screen - English")
 @Composable
 fun PreviewChoiceEng() {
-    LoginRegChoiceScreen(isEnglish = true, onLanguageChange = {}, onLoginRegClick = {})
-}
-
-@Preview(device = "id:pixel_5", showSystemUi = true, name = "2. Choice Screen - Bangla")
-@Composable
-fun PreviewChoiceBng() {
-    LoginRegChoiceScreen(isEnglish = false, onLanguageChange = {}, onLoginRegClick = {})
+    MaterialTheme {
+        LoginRegChoiceScreen(
+            isEnglish = true,
+            onLanguageChange = {},
+            onLoginRegClick = {}
+        )
+    }
 }
 
 @Preview(device = "id:pixel_5", showSystemUi = true, name = "3. Phone Entry")
 @Composable
 fun PreviewPhoneEntry() {
-    // Replace with your PhoneEntryScreen call
-    PhoneEntryScreen(isEnglish = true, onLanguageChange = {}, onBackClick = {}, onNextClick = {})
+    MaterialTheme {
+        PhoneEntryScreen(
+            isEnglish = true,
+            onLanguageChange = {},
+            onBackClick = {},
+            onNextClick = {}
+        )
+    }
 }
 
 @Preview(device = "id:pixel_5", showSystemUi = true, name = "4. Name Entry")
 @Composable
 fun PreviewNameEntry() {
-    // Replace with your NameEntryScreen call
-    NameEntryScreen(isEnglish = true, onBackClick = {}, onNextClick = {})
+    MaterialTheme {
+        NameEntryScreen(
+            isEnglish = true,
+            onBackClick = {},
+            onNextClick = {}
+        )
+    }
 }
 
 @Preview(device = "id:pixel_5", showSystemUi = true, name = "5. Profile Picture")
 @Composable
 fun PreviewProfilePic() {
-    // Replace with your ProfilePicScreen call
-    ProfilePicScreen(isEnglish = true, onBackClick = {}, onNextClick = {})
+    MaterialTheme {
+        ProfilePicScreen(
+            isEnglish = true,
+            onBackClick = {},
+            onNextClick = {}
+        )
+    }
 }
 
 @Preview(device = "id:pixel_5", showSystemUi = true, name = "6. PIN Setup")
 @Composable
 fun PreviewPinSetup() {
-    // Replace with your PinSetupScreen call
-    PinSetupScreen(isEnglish = true, onBackClick = {}, onNextClick = {})
+    MaterialTheme {
+        PinSetupScreen(
+            isEnglish = true,
+            onBackClick = {},
+            onNextClick = {}
+        )
+    }
 }
 
-//@Preview(device = "id:pixel_5", showSystemUi = true, name = "7. Login PIN Screen")
-//@Composable
-//fun PreviewLoginPin() {
-//    LoginPinScreen(
-//        phoneNumber = "01712345678",
-//        isEnglish = true,
-//        onLanguageChange = {},
-//        onBackClick = {},
-//        onNextClick = {}
-//    )
-//}
+@Preview(device = "id:pixel_5", showSystemUi = true, name = "7. Login PIN Screen")
+@Composable
+fun PreviewLoginPin() {
+    MaterialTheme {
+        LoginPinScreen(
+            phoneNumber = "01712345678",
+            correctPin = "12345",
+            isEnglish = true,
+            onLanguageChange = {},
+            onBackClick = {},
+            onNextClick = {}
+        )
+    }
+}
+
+@Preview(device = "id:pixel_5", showSystemUi = true, name = "8. Home Screen")
+@Composable
+fun PreviewHome() {
+    MaterialTheme {
+        HomeScreen(
+            isEnglish = true,
+            onLanguageChange = {}
+        )
+    }
+}
+
+@Preview(name = "Loading Overlay Preview")
+@Composable
+fun PreviewLoading() {
+    MaterialTheme {
+        LoadingOverlay(isLoading = true)
+    }
+}

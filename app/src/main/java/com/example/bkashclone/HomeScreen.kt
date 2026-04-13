@@ -3,7 +3,6 @@ package com.example.bkashclone
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -164,7 +163,7 @@ fun HomeHeader(isEnglish: Boolean, onLanguageChange: (Boolean) -> Unit) {
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Icon(
-                                painter = painterResource(id = R.drawable.ic_bkash_logo),
+                                painter = painterResource(id = R.drawable.ic_bkash_red_logo),
                                 contentDescription = null,
                                 tint = BkashPink,
                                 modifier = Modifier.size(14.dp)
