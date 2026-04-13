@@ -27,12 +27,21 @@ A high-fidelity clone of the bKash Android app, built entirely using **Jetpack C
 - **Persistence:** SharedPreferences (via `PrefManager`)
 - **Animation:** Compose Animation API (InfiniteTransitions, animateFloat)
 - **Concurrency:** Kotlin Coroutines
-
+- 
 ## 📸 Screenshots
 
-| Splash Screen | Login | Registration | Home Screen |
-|:---:|:---:|:---:|:---:|
-| ![Splash](https://github.com/yourusername/bkash-clone-compose/raw/main/screenshots/splash.png) | ![Login](https://github.com/yourusername/bkash-clone-compose/raw/main/screenshots/login.png) | ![Registration](https://github.com/yourusername/bkash-clone-compose/raw/main/screenshots/registration.png) | ![Home](https://github.com/yourusername/bkash-clone-compose/raw/main/screenshots/home.png) |
+<table>
+  <tr>
+    <td align="center"><b>Splash Screen</b></td>
+    <td align="center"><b>Login</b></td>
+    <td align="center"><b>Home Screen</b></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/kazol196295/BkashClone/blob/master/app/src/main/res/drawable/splash_screen.png" width="220"/></td>
+    <td><img src="https://github.com/kazol196295/BkashClone/blob/master/app/src/main/res/drawable/login_screen.png" width="220"/></td>
+    <td><img src="https://github.com/kazol196295/BkashClone/blob/master/app/src/main/res/drawable/home_screen.png" width="220"/></td>
+  </tr>
+</table>
 
 > 📁 Place your screenshots in the `/screenshots` folder at the root of the repository and replace `yourusername` with your actual GitHub username.
 
